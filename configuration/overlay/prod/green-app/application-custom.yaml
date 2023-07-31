@@ -4,3 +4,7 @@ spring:
   application:
     name: green-app
   microservice-name: green-app
+  sampler:
+    probability: '1.0'
+  zipkin:
+    baseUrl: http://zipkin.zipkin:9411
