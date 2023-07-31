@@ -11,7 +11,7 @@ images:
 - !!skcc.generate.model.kustomize.ImagePatchModel
   name: app
   newName: amdp-registry.skamdp.org/eb-istio/prod/purple-app
-  newTag: latest
+  newTag: 0.1.0
 kind: Kustomization
 namePrefix: purple-app-
 nameSuffix: -prod
