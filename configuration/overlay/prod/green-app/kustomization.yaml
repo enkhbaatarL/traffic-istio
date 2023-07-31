@@ -1,0 +1,32 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+commonLabels:
+  amdp.io/app: green-app
+  amdp.io/profile: eb-istio.prod
+configMapGenerator:
+- behavior: merge
+  files:
+  - application-custom.yaml
+  name: app-config
+images:
+- name: app
+  newName: amdp-registry.skamdp.org/eb-istio/prod/green-app
+  newTag: latest
+kind: Kustomization
+namePrefix: green-app-
+nameSuffix: -prod
+patchesJson6902:
+- path: service-patch.yaml
+  target:
+    kind: Service
+    name: app
+    version: v1
+patchesStrategicMerge:
+- container-patch.yaml
+- imagepolicy-patch.yaml
+- pod-lifecycle-patch.yaml
+- probe-patch.yaml
+- spec-patch.yaml
+- replicas-patch.yaml
+- active-profiles-patch.yaml
+resources:
+- ../common/deployment
