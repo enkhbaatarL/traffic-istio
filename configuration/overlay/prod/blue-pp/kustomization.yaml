@@ -11,7 +11,7 @@ images:
 - !!skcc.generate.model.kustomize.ImagePatchModel
   name: app
   newName: amdp-registry.skamdp.org/eb-istio/prod/blue-pp
-  newTag: latest
+  newTag: 0.1.0
 kind: Kustomization
 namePrefix: blue-pp-
 nameSuffix: -prod
