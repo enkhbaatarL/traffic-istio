@@ -1,0 +1,6 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: blue-pp
+  microservice-name: blue-pp
