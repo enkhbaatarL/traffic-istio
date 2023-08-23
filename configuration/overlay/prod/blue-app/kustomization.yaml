@@ -8,9 +8,10 @@ configMapGenerator:
   - application-custom.yaml
   name: app-config
 images:
-- name: app
+- !!skcc.generate.model.kustomize.ImagePatchModel
+  name: app
   newName: amdp-registry.skamdp.org/eb-istio/prod/blue-app
-  newTag: 0.1.1
+  newTag: 0.1.2
 kind: Kustomization
 namePrefix: blue-app-
 nameSuffix: -prod
