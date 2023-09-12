@@ -1,4 +1,4 @@
-apiVersion: <%=api_version%>
+apiVersion: apps/v1
 kind: <%=deploy_type%>
 metadata:
   name: app
