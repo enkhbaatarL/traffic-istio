@@ -10,7 +10,7 @@ metadata:
 spec:
   sessionAffinity: None
   selector:
-    amdp.io/app: purple-app
+    amdp.io/app: green-app
     amdp.io/profile: eb-istio.prod
   ports:
   - !!skcc.generate.model.service.ServicePortModel
