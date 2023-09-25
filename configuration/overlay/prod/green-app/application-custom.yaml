@@ -8,3 +8,4 @@ spring:
     probability: '1.0'
   zipkin:
     baseUrl: http://zipkin.zipkin:9411
+asdf: ${df}
