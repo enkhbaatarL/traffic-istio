@@ -21,7 +21,7 @@ patchesStrategicMerge:
   - imagepolicy-patch.yaml
   - pod-lifecycle-patch.yaml
   - probe-patch.yaml
-  - replicas-patch.yaml
+  # - replicas-patch.yaml
   - spec-patch.yaml
 patchesJson6902:
   - target:
