@@ -11,7 +11,7 @@ images:
 - !!skcc.generate.model.kustomize.ImagePatchModel
   name: app
   newName: amdp-registry.skamdp.org/eb-istio/prod/green-app
-  newTag: 0.1.58
+  newTag: 0.1.59
 kind: Kustomization
 namePrefix: green-app-
 nameSuffix: -prod
