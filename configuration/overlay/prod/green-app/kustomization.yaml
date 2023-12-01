@@ -8,8 +8,7 @@ configMapGenerator:
   - application-custom.yaml
   name: app-config
 images:
-- !!skcc.generate.model.kustomize.ImagePatchModel
-  name: app
+- name: app
   newName: amdp-registry.skamdp.org/eb-istio/prod/green-app
   newTag: 0.1.59
 kind: Kustomization
@@ -31,5 +30,6 @@ patchesStrategicMerge:
 - configmap-env-patch.yaml
 - active-profiles-patch.yaml
 - pod-template-annotation-patch.yaml
+- istio-injection-patch.yaml
 resources:
 - ../common/deployment
